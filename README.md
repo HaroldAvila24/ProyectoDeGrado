@@ -1,4 +1,4 @@
-Sistema de Gestión de Bases de Datos (SGBD) con integración de Inteligencia Artificial, diseñado para optimizar la manipulación de datos y la inferencia a partir de imágenes en consultas SQL.
+Sistema de Gestión de Bases de Datos Relacionales (SGBDR) con integración de Inteligencia Artificial, diseñado para optimizar la manipulación de datos y la inferencia a partir de imágenes en consultas SQL.
 
 📌 Características
 
