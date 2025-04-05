@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Moderna</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilo para la sección principal */
+        @keyframes glow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+   
+
+        .hero {
+            /* background: linear-gradient(135deg, #FFD700, #FFA500, #000000);
+            /* Degradado estilo abeja */
+
+            background-image: url('mg_autor/fondo.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+
+            text-align: center;
+            padding: 60px 20px;
+            animation: glow 6s ease infinite;
+        }
+
+        .hero img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+        }
+
+        /* Barra de navegación */
+        .navbar {
+            background: linear-gradient(15deg, #000000, #ffa5004f, #00000000);
+            /* Degradado estilo abeja */
+
+            background-color: #1d2b39;
+            /* Color oscuro */
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: white !important;
+        }
+
+        .nav-link:hover {
+            color: #FFE0B2 !important;
+        }
+
+        .btn-about {
+            background-color: #000000;
+
+            color: white;
+            border-radius: 20px;
+            padding: 5px 15px;
+        }
+
+        .btn-about:hover {
+            background-color: linear-gradient(150deg, #000000, #ffa5004f, #00000000);
+            color: #FFE0B2;
+        }
+
+
+        .nav img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .info {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .info img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 5px solid white;
+
+        }
+
+        .info li {
+            text-align: left;
+        }
+
+        .highlight {
+            background: #ff9d00;
+            padding: 1rem;
+            border-left: 4px solid #FF8A65;
+            border-radius: 4px;
+        }
+
+
+        /**/
+        /* Diseño de tarjetas */
+        .download-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        .download-card {
+            background: linear-gradient(135deg, #ffd70066, #ffb100c9, #0000002b);
+
+            border: 2px solid #FFB300;
+            padding: 20px;
+            border-radius: 10px;
+            width: 270px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .download-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Botón de descarga */
+        .download-btn {
+            display: inline-block;
+            margin-top: 15px;
+            background: #212121ca;
+            color: #FFB300;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: #FFB300;
+            color: #212121;
+        }
+
+        .descargas img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid rgb(0, 0, 0);
+
+        }
+
+        /**/
+
+        /* Paleta de colores */
+        :root {
+            --amarillo: #FFC107;
+            /* Amarillo abeja */
+            --negro: #222;
+            --color-black: #000000;
+            --color-white: #ffffff;
+            --color-yellow-intense: linear-gradient(135deg, #ffd70066, #ffb100c9, #0000002b);
+            ;
+            --color-yellow-light: #ffffec;
+            --color-orange-yellow: #ffaf04;
+        }
+
+
+        .team-section {
+            background:   linear-gradient(270deg, #ffe8b3c9, #ffca4ec9, #0000002b);
+            background-size: 400% 400%;
+            animation: glow 6s ease infinite;
+            padding: 50px 20px;
+            text-align: center;
+            background-attachment: fixed;
+
+        
+        }
+        
+           
+
+        .team-member {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+
+            /*  border-radius: 50%;*/
+            border: 3px solid rgb(0, 0, 0);
+        }
+
+        .team-membe {
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .team-membe:hover img {
+            transform: scale(1.1);
+        }
+
+
+        .team-membe img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .team-membe:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ebcb97;
+            ;
+            color: var(--color-white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            padding: initial;
+            border-radius: 10px;
+        }
+        .inicio {
+    background: url(mg_autor/preguntas.jpg);
+   
+    animation: glow 6s ease infinite;
+    background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+
+            text-align: center;
+            padding: 60px 20px;
+            animation: glow 6s ease infinite;
+}
+
+        body {
+            /*  background: linear-gradient(135deg, #FFD700, #FFA500, #000000);
+    background-attachment: fixed;*/
+           /* background-color: #FFF8E1;*/
+            color: #4E342E;
+            background:   linear-gradient(270deg, #b1a68cc9, #ffd46fc9, #0000002b);
+            background-size: 400% 400%;
+            animation: glow 6s ease infinite;
+        }
+
+        header {
+            background: #FFF3E0;
+            color: #3E2723;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
+            background: #FFE0B2;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #8D6E63;
+            color: white;
+            /*  position: fixed;*/
+            bottom: 0;
+            width: 100%;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #b3b3b3c9, #ffb100, #0000002b);
+            
+
+            padding: 60px 0;
+            animation: glow 6s ease infinite;
+        }
+
+        .contact-card {
+            background: var(--color-white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info {
+            background: var(--color-black);
+            color: var(--color-white);
+            padding: 30px;
+            border-radius: 8px;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container nav">
+            <a class="navbar-brand fw-bold" href="#hero"> <img src="mg_autor/icon.png" alt="Imagen de perfil">
+                UdenarDBMS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#descarga">Descargar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#equipo">Equipo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="btn btn-about" href="#Mas">Mas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección principal -->
+    <section id="hero">
+        <div class="hero">
+            <img src="mg_autor/icon.png" alt="Imagen de perfil">
+            <h1 class="display-5 fw-bold mt-3">UdenarDBMS</h1>
+            <p class="lead"> Sistema gestor | Motor de base | Módulo de AI</p>
+        </div>
+    </section>
+
+    <!-- Sección Info -->
+    <section id="inicio">
+
+        <div class="row justify-content-center inicio">
+                       <div class="col-md-5 info">
+                <img src="mg_autor/icon.png" alt="">
+                <h2 class=" border-bottom pb-2">¿Qué es UdenarDBMS?</h2>
+                <div class="highlight">
+                    <p>UdenarDBMS es un Sistema de Gestión de Bases de Datos Relacional diseñado como
+                        parte de nuestro trabajo de grado en la Universidad de Nariño. Este sistema integra redes
+                        neuronales artificiales directamente en su núcleo para optimizar y medir la eficiencia en
+                        operaciones DML (Data Manipulation Language) con datos en formato de imagen.</p>
+                </div>
+
+            </div>
+            <div class="col-md-5 info">
+                <img src="mg_autor/destacados.png" alt="">
+
+                <h2 class=" border-bottom pb-2">Aspectos Destacados del Proyecto</h2>
+                <div class="highlight">
+                    <ul>
+
+                        <li><strong>Optimización en Operaciones DML con Imágenes:</strong> Integración de IA para
+                            mejorar el rendimiento y gestión de grandes volúmenes de imágenes.</li>
+                        <li><strong>Aplicación Académica y Práctica:</strong> Desarrollo de nuevas oportunidades
+                            para la
+                            gestión de datos no estructurados en entornos académicos e industriales.</li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <section id="descarga">
+        <div class="container">
+            <div class="descargas">
+                <h2>Descargas
+                    <img src="mg_autor/descargas.png" alt="">
+
+                </h2>
+            </div>
+            <div>
+                <p class="intro-text">
+                    UdenarDBMS, UdenarSQL y UdenarAI están disponibles para su implementación como módulos listos para
+                    usar
+                    o como código fuente si desea personalizarlos y compilarlos usted mismo.
+                </p>
+
+                <div class="download-grid">
+                    <div class="download-card">
+                        <h3>UdenarDBMS</h3>
+                        <p>Sistema gestor de bases de datos encargado de administrar y almacenar la información de
+                            manera
+                            eficiente.</p>
+                        <a href="UDENARDBMS.zip" download class="download-btn">Descargar</a>
+                    </div>
+
+                    <div class="download-card">
+                        <h3>UdenarSQL</h3>
+                        <p>Motor de base de datos que procesa consultas SQL y gestiona la ejecución de operaciones sobre
+                            los
+                            datos.</p>
+                        <a href="UDENARSQL.zip" download class="download-btn">Descargar</a>
+                    </div>
+
+                    <div class="download-card">
+                        <h3>UdenarAI</h3>
+                        <p>Módulo de inteligencia artificial encargado de manejar la lógica para las predicciones
+                            basadas en los datos almacenados.</p>
+                        <a id="downloadLink" href="servidor2.zip" download class="download-btn">Descargar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Sección Equipo -->
+    <section class="team-section" id="equipo">
+        <div class="container">
+            <div class="descargas">
+                <h2 class="fw-bold">Conoce nuestro Equipo
+                    <img src="mg_autor/equipo.png" alt="">
+
+                </h2>
+            </div>
+
+            <p class="text-muted">El código puede fallar, las bases de datos pueden caerse, pero un equipo unido siempre
+                encuentra la solución.
+                Innovemos, optimicemos y conquistemos cada desafío juntos</p>
+
+            <div class="row justify-content-center">
+                <div class="col-md-4 team-member">
+                    <div class="team-membe">
+                        <img src="mg_autor/harold.jpg" alt="Fred Morrison">
+                        <div class="overlay">
+                            <img src="mg_autor/harold.jpg" alt="Roxie Swanson">
+                            <br>
+                            <div class="">
+                                <ul>
+
+                                    <li><strong>Arquitectura de Software </strong> </li>
+                                    <li><strong>lógica de programación</strong></li>
+                                    <li><strong>Gestión de equipo </strong></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <h5 class="mt-3 fw-bold">Harold Stiven Avila</h5>
+                        <p class="text-muted">Desarrollador 1 - INGENIERO DE SISTEMAS</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 team-member">
+                    <div class="team-membe">
+                        <img src="mg_autor/yese.jpeg" alt="yes">
+
+                        <div class="overlay">
+                            <img src="mg_autor/yese.jpeg" alt="yes">
+                            <br>
+                            <ul>
+
+                                <li><strong>Desarrollo Full Stack </strong> </li>
+                                <li><strong>Liderazgo Técnico</strong></li>
+
+                            </ul>
+
+                        </div>
+
+                        <h5 class="mt-3 fw-bold">Yesenia Castro Arboleda</h5>
+                        <p class="text-muted">Desarrollador 2 - INGENIERA DE SISTEMAS</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 team-member">
+                    <div class="team-membe">
+                        <img src="mg_autor/yei.jpg" alt="Roxie Swanson">
+                        <div class="overlay">
+                            <img src="mg_autor/yei.jpg" alt="Roxie Swanson">
+                            <br>
+                            <div class="">
+                                <ul>
+
+                                    <li><strong>optimización de código</strong> </li>
+                                    <li><strong>lógica de programación</strong></li>
+                                    <li><strong>Gestión de proyectos </strong></li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h5 class="mt-3 fw-bold">Yeison Alfredo Micolta</h5>
+                        <p class="text-muted">Desarrollador 3 - INGENIERO DE SISTEMAS</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 team-member">
+                    <div class="team-membe">
+                        <img src="mg_autor/asesor.jpg" alt="Co-Advisor">
+
+
+                        <h5 class="mt-3 fw-bold">Héctor Andrés Mora</h5>
+                        <p class="text-muted">Asesor - <strong>Magíster en inteligencia artificial (C)</strong></p>
+                    </div>
+                </div>
+                <div class="col-md-4 team-member">
+                    <div class="team-membe">
+                        <img src="mg_autor/icon1.png" alt="Co-Advisor">
+
+
+                        <h5 class="mt-3 fw-bold">Jorge Albeiro Rivera Rosero</h5>
+                        <p class="text-muted">Co-Asesor - <strong>Magíster en ciencias (C)</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="container contact-section mt-5">
+            <div class="row">
+                <div class="col-md-5 contact-info">
+                    <h4 class="mb-4">Contáctanos</h4>
+                    <p><strong>📞 LLÁMANOS</strong><br>320 8696694,318 8128609,318 6034693 </p>
+                    <p><strong>📍 UBICACIÓN</strong><br>Universidad de Nariño, Tumaco, Colombia</p>
+                    <p><strong>⏰ HORAS DISPONIBLE</strong><br>Lun - Vie: 10 am - 8 pm, Sáb, Dom: Cerrado</p>
+                </div>
+                <div class="col-md-7">
+                    <div class="contact-card">
+                        <h4 class="mb-4">Enviar Gmail</h4>
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Ingrese su nombre">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Ingrese un correo válido">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="3" placeholder="Escribe tu mensaje"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-dark w-100">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 UdenarDBMS. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
