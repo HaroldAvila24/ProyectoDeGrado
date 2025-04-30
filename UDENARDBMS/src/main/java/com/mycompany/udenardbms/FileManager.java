@@ -1053,7 +1053,7 @@ public class FileManager {
                     break;
                 } else {
                     try {
-                        Thread.sleep(100); // Esperar 100 ms antes de reintentar
+                        Thread.sleep(100); // Esperar 100 ms antes de reintentar.
                     } catch (InterruptedException e) {
                         Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, e);
                     }
